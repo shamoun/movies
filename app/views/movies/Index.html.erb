@@ -1,1 +1,14 @@
-Index
+
+<ul>
+<% all_movies = Movie.read %>
+
+<% all_movies.each do |movie| %>
+<li>
+<%= movie["title"] %>
+(<%= movie["year"] %>)
+</li>
+<% end %>
+</ul>
+
+
+<h2>we have <%= movie.count %> movies.</h2>
